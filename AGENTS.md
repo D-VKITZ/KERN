@@ -1,20 +1,82 @@
-# DkZ AGENTS.md â€” Agenten-Registry
+# DEVKiTZ Agent Registry
 
-> Stand: 2026-05-30 | Zentrale Agent-Uebersicht fuer alle LLMs
+> 41 Agenten im DEVKiTZ Oekosystem. Stand: 2026-05-30
 
 ---
 
-## BMAD Agenten (7 Rollen)
+## BMAD Kern-Agenten (7)
 
-| # | Agent | Aufgabe | Status |
-|:--|:------|:--------|:-------|
-| 1 | Jamesâ„¢ | Guardian â€” ueberwacht alle, coded NICHT | Aktiv (dkz-james.js) |
-| 2 | DkZ PMâ„¢ | Product Manager â€” spec.md, User Stories | Definiert |
-| 3 | DkZ Architektâ„¢ | plan.md, Tech-Stack | Definiert |
-| 4 | DkZ Developerâ„¢ | Coder â€” Ralph-Loop Executor | Definiert |
-| 5 | DkZ Reviewerâ„¢ | CodeRabbit â€” Qualitaetspruefung | Definiert |
-| 6 | DkZ Testerâ„¢ | Tests + Validierung | TestStrasse v3 |
-| 7 | DkZ Dokumentarâ„¢ | README, Wiki, Learnings | Definiert |
+| # | Agent | Rolle | Team | Status |
+|:--|:------|:------|:-----|:-------|
+| 1 | James Guardian | Ueberwacht alle, coded NICHT | james-guardian | Active |
+| 2 | DkZ PM | Product Manager, Specs, User Stories | dkz-pm | Active |
+| 3 | DkZ Architekt | plan.md, Tech-Stack Entscheidungen | dkz-architekt | Active |
+| 4 | DkZ Developer | Coder, Ralph-Loop Executor | dkz-developer | Active |
+| 5 | DkZ Reviewer | CodeRabbit Qualitaetspruefung | dkz-reviewer | Active |
+| 6 | DkZ Tester | Tests + Validierung (TestStrasse v3) | dkz-tester | Active |
+| 7 | DkZ Dokumentar | README, Wiki, Learnings | dkz-dokumentar | Active |
+
+---
+
+## Builder Agenten (14)
+
+| # | Agent | Aufgabe | Team |
+|:--|:------|:--------|:-----|
+| 8 | Wiki+Kanban Mega Builder | Wiki Modul (1198 Zeilen, 8 Tabs) | core-team |
+| 9 | Kanban + Patterns Builder | GitHub Kanban Boards + Pattern Docs | core-team |
+| 10 | LLMs.txt + GitHub Rules Builder | llms.txt Dateien + KERN Backup | docs-team |
+| 11 | PWA Builder 1 (Copy+TTS+QR) | CopyPaste, TTS-Reader, QR-Scanner | core-team |
+| 12 | PWA Builder 2 (Timer+Clip+Screen) | DkZ-Timer, Clipboard, Screenshot | core-team |
+| 13 | MiroFish Module Builder | MiroFish Simulator Modul | ai-team |
+| 14 | GitNexus Module Builder | GitNexus Explorer Modul | core-team |
+| 15 | OpenHumans Module Builder | OpenHumans Hub Modul | ai-team |
+| 16 | AiAiKirk Module Builder | AI Module Integration | ai-team |
+| 17 | CLOUDIA Module Builder | Cloud Control Modul | infra-team |
+| 18 | DEEPKEEP Module Builder | Security + Sanitizer Modul | infra-team |
+| 19 | Webhook Hub Builder | Webhook Dashboard | infra-team |
+| 20 | Skeleton Module Builder | Modul-Grundgerueste (Batch) | core-team |
+| 21 | Module Builder (Batch) | Mehrere Module parallel | core-team |
+
+---
+
+## Infrastructure Agenten (8)
+
+| # | Agent | Aufgabe | Team |
+|:--|:------|:--------|:-----|
+| 22 | Infrastructure Researcher | VPS + Cloud Recherche | infra-team |
+| 23 | VPS Infrastructure Researcher | KVM8 Server Analyse | infra-team |
+| 24 | Cloud Infrastructure Analyst | EU Cloud + Puter Planung | infra-team |
+| 25 | Automation Script Builder | Python/Bash Automatisierung | infra-team |
+| 26 | Python Automation Builder | vps-auto-update.py + Cron | infra-team |
+| 27 | System Integration Researcher | System-Verbindungen Research | infra-team |
+| 28 | OpenHands Researcher | OpenHands VPS Integration | infra-team |
+| 29 | Drive Health Analyst | Google Drive Sync + Health | infra-team |
+
+---
+
+## GitHub Agenten (6)
+
+| # | Agent | Aufgabe | Team |
+|:--|:------|:--------|:-----|
+| 30 | 7IKED Repos README Updater | 25 Repos READMEs | docs-team |
+| 31 | D-VKITZ README Pusher | 11 Repos READMEs | docs-team |
+| 32 | GitHub Issues Creator | Issues #208-#247 erstellen | core-team |
+| 33 | Critical Issue Fixer | P1/P2 Issues automatisch fixen | core-team |
+| 34 | README Generator | Batch README Generierung | docs-team |
+| 35 | Git Branch Cleaner | Alte Branches aufraeumen | core-team |
+
+---
+
+## Analyse Agenten (6)
+
+| # | Agent | Aufgabe | Team |
+|:--|:------|:--------|:-----|
+| 36 | Unfinished Work Scanner | Unfertige Module finden | dkz-reviewer |
+| 37 | Brain Conversation Scanner | Antigravity Brain durchsuchen | ai-team |
+| 38 | Features.json Drift Analyst | Module vs features.json Abgleich | dkz-tester |
+| 39 | Workspace Structure Analyst | Ordnerstruktur analysieren | dkz-architekt |
+| 40 | Git History Analyst | Git Log Auswertung | dkz-reviewer |
+| 41 | Legacy Project Analyst | Alte Projekte evaluieren | dkz-reviewer |
 
 ---
 
@@ -22,63 +84,24 @@
 
 | Bot | Datei | Zweck |
 |:----|:------|:------|
-| Antigravity | nanobot-antigravity.js | Gemini Agent Kommunikation |
-| OpenCode | nanobot-opencode.js | OpenCode Agent Kommunikation |
+| Antigravity | nanobot-antigravity.js | Gemini Agent |
+| OpenCode | nanobot-opencode.js | OpenCode Agent |
+| Gemma4 2B | (integriert) | Lokales LLM Fallback |
 
 ---
 
-## Health Check System
+## Copilot Integration
 
-| Komponente | Zweck |
-|:-----------|:------|
-| Startup Skill | Session-Start Validierung |
-| Checkup Skill | Deep Diagnostik |
-| Health Agent | Universeller Pruefer |
-| Health Chain | Python Check-Kette |
-| REDNOTE DB | Zentrale Fehlerdatenbank |
-| REDNOTE Collector | Fehler-Manager CLI |
-| Dashboard | Visueller Health Monitor |
+Alle Agenten koennen ueber GitHub Copilot Chat aktiviert werden:
+- copilot-instructions.md: Globale Regeln
+- .github/prompts/*.prompt.md: Task-spezifische Prompts
+- AGENTS.md: Agent-Definitionen fuer Copilot Coding Agent
 
----
-
-## Skills (54 Skills in .agents/skills/)
-
-### Kern-Skills
-- startup â€” Session-Start Check
-- checkup â€” Deep Diagnostik
-- health-agent â€” Universeller Pruefer
-- power â€” Superpowers Lab + DDD
-- power-openspec â€” OpenSpec Integration
-- playbook â€” Regeln und Playbooks laden
-
-### Entwicklungs-Skills
-- mod-builder â€” Modul Generator
-- dkz-webapp-builder â€” WebApp Builder
-- dkz-skillpack â€” Skill-Paket Manager
-- ralph-loop-tester â€” Ralph Loop Tests
-- react-components â€” Stitch zu React
-
-### Content-Skills
-- notebooklm-integration â€” NLM Batch Content
-- frontpage-builder â€” Landing Pages
-- changelog-generator â€” Changelogs
-- swarm-content-creator â€” Multi-Agent Content
-
-### Design-Skills
-- stitch-design â€” Stitch Design System
-- taste-design â€” Semantic Design
-- hyperreal-ui â€” Hyperrealistisches UI
-- enhance-prompt â€” Prompt Enhancement
-
----
-
-## Kommunikation
+## Delegations-Kette
 
 ```
-Agent <-> NanoChat Bridge (Port 3040) <-> Dashboard
-  |                                        |
-REDNOTE.json                          localStorage
+User -> Copilot Pro (1200 Premium Requests)
+  -> GitHub Coding Agent (Issues -> PRs)
+  -> Gemma4 2B (lokales Fallback)
+  -> VPS Auto-Update (Python Cron)
 ```
-
-Alle Agenten kommunizieren ueber die NanoChat Bridge.
-Health-Checks laufen ueber die Python Chain oder Shell-Befehle.
