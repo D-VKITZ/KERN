@@ -3,6 +3,23 @@
 > Zentrale Konfiguration fuer GitHub Copilot Coding Agent + Chat.
 > Alle Agenten, Skills und Workflows sind hier referenziert.
 
+## WICHTIG: Context Bridge
+
+Lies `.github/CONTEXT_BRIDGE.md` fuer aktuellen Kontext von Antigravity (Gemini Agent).
+Dort stehen: letzte Aktionen, offene Aufgaben, Session-Historie.
+
+Bei JEDEM PR/Issue den du erstellst:
+1. @7IKED erwaehnen mit konkreter Aufgabe
+2. CONTEXT_BRIDGE.md mit deiner Aktion updaten
+3. Referenz auf den Antigravity-Kontext angeben
+
+## Custom Agents (via @name)
+
+- `@dkz-builder` â€” Module bauen/reparieren (`.github/agents/dkz-builder.agent.md`)
+- `@dkz-infra` â€” VPS/Docker/CI (`.github/agents/dkz-infra.agent.md`)
+- `@dkz-docs` â€” README/Wiki/Changelog (`.github/agents/dkz-docs.agent.md`)
+- `@dkz-reviewer` â€” Code Review (`.github/agents/dkz-reviewer.agent.md`)
+
 ## Projekt
 
 DEVKiTZ â€” KI-Entwickler-Oekosystem mit 152+ Dashboard-Modulen.
